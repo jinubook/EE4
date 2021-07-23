@@ -18,16 +18,28 @@ try:
   else:
     d = [""]
     f = 0
+    isout = False;
+    outstr = ""
     for s in msys:
-      # Python 3.9 Syntax, If You're Using Older Versions, Upgrade It.
-      f = s.removesuffix("MAKE C: ");
+      # Python 3.9 Syntax, If You're Using Older Versions, Upgrade It
+      try:
+        f = s.removesuffix("MK ");
+      except:
+        try:
+          outstr = s.removesuffix("OUT ");
+          isout = True
+        except:
+          print("Parser Error: Undefined Syntax")
       d[f] = f
       f += 1
     print("Making C Code To ee4_gen.....")
     s = ""
     for a in d:
       s += " " + a
-    os.system("gcc " + s)
+    if isout:
+      os.system("gcc " + s + " -o " + outstr)
+    else:
+      os.system("gcc " + s);
     print("Made ee4_gen")
 except:
-  print("EE4.make Does Not Exists.")
+  print("ee4.make Does Not Exists.")
