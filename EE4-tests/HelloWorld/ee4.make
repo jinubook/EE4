@@ -1,4 +1,4 @@
 MK helloworld.c
 MK hellowor.c
-COMPILER clang
+MK helloworld.h
 OUTPUT helloworld
