@@ -1,7 +1,7 @@
 # Python Bash EE4 make C++ Making
 import sys;
 try:
-  u = open("EE4.make", "r")
+  u = open("ee4.make", "r")
   arr = u.readlines();
   sr = ""
   for ln in arr:
