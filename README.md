@@ -14,4 +14,6 @@ Windows/Mac Instructions To Install:
 5. Run EE4.
 ## Syntax
 Including Files:
-`MK [PATH]`
+`MK [PATH]`\
+Output: 
+`OUT [PATH]`
