@@ -17,3 +17,9 @@ Including Files:
 `MK [PATH]`\
 Output: 
 `OUT [PATH]`
+Sample:
+```
+MK helloworld.c
+MK helloworld.h
+OUT mkf
+```
